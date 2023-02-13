@@ -1,40 +1,66 @@
-# Regex Tutorial C17
+# URL Regex Tutorial C17
 
 Introductory paragraph (replace this with your text)
 
 ## Summary
-
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regex that is explained in this project is to match a URL found on the internet. The regex is written `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` and can find most to all URLs with this regex. 
 
 ## Table of Contents
-
+- [Regex Components](#regex-components)
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
-- [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
-- [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
+`/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
 
-### Anchors
+## Anchors
+`/^`(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?`$/`
 
-### Quantifiers
+`/` = start and end of regex
 
-### Grouping Constructs
+`^` = beginning of the string/line
 
-### Bracket Expressions
+`$` = end of the string/line
 
-### Character Classes
+## Quantifiers
+/^(https`?`:\/\/)`?`([\da-z\.-]`+`)\.([a-z\.]`{2,6}`)([\/\w \.-]`*`)`*`\/`?`$/
 
-### The OR Operator
+`?` = 0 or 1 values (means optional)
 
-### Flags
+`+` = 1 or more values
+
+`{2,6}` = min and/or max values
+
+`*` = 0 or more values
+
+## Grouping Constructs
+/^`(`https?:\/\/`)`?`(`[\da-z\.-]+`)`\.`(`[a-z\.]{2,6}`)(`[\/\w \.-]*`)`*\/?$/
+
+`( )` = captures group values
+
+## Character Classes
+/^(https?:\/\/)?(`[\da-z\.-]`+)\.(`[a-z\.]`{2,6})(`[\/\w \.-]`*)*\/?$/
+
+`[ ]` = character class
+
+`\d` = 0-9 (digits)
+
+`a-z` = a-z (lowercase alphabets from a-z)
+
+`\.` = literal period .
 
 ### Character Escapes
+/^(https?:`\/\/`)?([\da-z`\.-`]+)\.([a-z`\.`]{2,6})([`\/`\w `\.-`]*)*`\/`?$/
+
+`\` = escape code, literal meaning of the following character
+
+`\.-` = literal period . and literal dash -
+
+`\/` = literal slash /
 
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Esther Choi
+https://github.com/yerimechoi
